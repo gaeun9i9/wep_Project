@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to gaeun's Home</title>
+    <link rel="w3.css" href="./css/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        *{font-family: "맑은 고딕", Arial, Helvetica, sans-serif;}
-        header h1 {display: inline;}
+        *{font-family: Arial, Helvetica, sans-serif;}
+        header img{ display: block; margin: 0px auto;}
+        header h1{ text-align: center;}
         ul {list-style-type: none;}
         a {text-decoration: none;}
         nav ul{
@@ -17,7 +21,7 @@
         nav ul li{
             display: inline;
             padding: 15px 20px;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
         }
         nav ul li:hover{
             background-color: #DB7093;
@@ -25,15 +29,19 @@
         nav li a:hover{
             color: #FFEFD5;
         }
+        body{width: 950px; margin: 0 auto;}
+        section img{text-align: center;}
 
     </style>
 </head>
+
 <body>
     <!--header>h1{Gaeun's Site}+nav>ul>li{menu$$}*4(공백없어야됨)-->
     <header>
-        <img src="./images/logophoto.jpg " alt="logophoto" height="200" width="200">
+        <img src="./images/logophoto.jpg " alt="logophoto" height="150" width="150" >
         <h1>Gaeun's Site</h1>
     </header>
+
     <!--nav>ul>li*2>a{menu$$}-->
     <nav>
         <ul>
@@ -42,27 +50,32 @@
             <li><a href="#myfavoritesongs">my favorite songs</a></li>
         </ul>
     </nav>
-    <section>
+
+    <!-- section 배치를 왼쪽으로/ container: 엘리먼트들을 담는 것 -->
+    <section class="w3-left w3-container" style="width: 70%;">
         <!--#photo-->
         <div id="photo">
-            <img src="./images/myphoto.jpg" alt="myphoto" height="300" width="240">
+            <div class="w3-row">
+                <img class="w3-col s5 w3-border w3-margin" src="./images/myphoto.jpg" alt="myphoto" height="300" width="240">
+                <img class="w3-col s5 w3-border w3-margin" src="./images/myphoto2.jpg" alt="muphoto2" height="300" width="240">
+            </div>
         <br>
-        <h2>좋아하는 오디오</h2>
+        <hr>
+        <h2 class="w3-text-black w3-xlarge">좋아하는 오디오</h2>
         <audio autoplay loop src="./media/music01.mp3" controls></audio>
-        <h2>환경을 사랑합니다</h2>
-        <video width="50%" height="50%" controls autoplay loop src="./media/movie.mp4" controls></video>
+        <br>
+        <h2 class="w3-text-black w3-xlarge">( ⁎ ᵕᴗᵕ ⁎ ) </h2>
+        <video width="50%" height="50%" controls autoplay loop src="./media/clouds.mp4" controls></video>
+        <br>
         <hr>
-        <h2>즐겨보는 유튜버 영상</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7z8CFrIaT2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2 class="w3-text-black w3-xlarge">좋아하는 영상</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PB_2g7J12l0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <hr>
-        <iframe src="start.html" frameborder="0" width="70%" height="240px">
-            지원되지 않는 브라우저입니다.
-        </iframe> 
         </div>
         <div id="profile"> 
-            <h2>My name is Gaeun!</h2>
-            <table border="1">
-                <tr>
+            <h2 class="w3-text-black w3-xlarge">My name is Gaeun!</h2>
+            <table class="w3-table-all w3-hoverable">
+                <tr class="w3-black">
                     <th>목차</th>
                     <th>내용</th>
                 </tr>
@@ -84,10 +97,11 @@
                 </tr>
             </table>
         </div>
+        <br><br><br>
         <div id="myfavoritesongs">
-            <h2>My favorite songs~~</h2>
-            <table border="1">
-                <tr>
+            <h2 class="w3-text-black w3-xlarge">My favorite songs</h2>
+            <table class="w3-table-all w3-hoverable">
+                <tr class="w3-black">
                     <th>가수</th>
                     <th>노래제목</th>
                 </tr>
@@ -106,23 +120,48 @@
             </table>
         </div>
         <br><br><br><br><br><br><br><br><br><br>
-    <div id="link">
-        <!--문서간 이동-->
-        <a href="http://www.donga.ac.kr" target="_blank">동아대학교</a><br>
-        <a href="http://www.naver.com" target="_self">네이버</a><br>
-        <a href="start.html">start페이지이동</a><br>
-        <!--문서내 이동-->
-        <a href="#photo">사진으로 이동</a>
-    </div>
-    <div id="login">
+    </section>
+
+
+    <aside class="right">
+     <div id="login">
+        <h3>Log In</h3>
         <form action="#" method="POST">
-            아이디 : <input type="text" name="name"> <br>
+            아이디   : <input type="text" name="name"> <br>
             비밀번호 : <input type="password" name="pass" id="pass"> <br>
             <input type="submit" value="확인">
             <input type="reset" value="취소">
         </form>
     </div>
-    </section>
-    <footer>&copy; Gaeun</footer>
+    <br><br>
+    <div id="link">
+        <h3>바로가기</h3>
+        <!--문서간 이동-->
+        <a href="http://www.donga.ac.kr" target="_blank">동아대학교</a><br>
+        <a href="http://www.naver.com" target="_self">네이버</a><br>
+        <!--문서내 이동-->
+        <a href="#photo">사진으로 이동</a>
+    </div>
+    </aside>
+
+    <footer>
+        <div class="w3-row"> <!-- grid 를 이용하여 작성하였음  -->
+            <div class="w3-col s4  w3-container" >
+                <h5> Contact Me</h5>
+                <ul>
+                  <li>Email: <a href="mailto:jge0919@donga.ac.kr" title="Email Us">jge0919@donga.ac.kr</a></li>
+                  <li>SNS:
+                    <a href="https://www.instagram.com/gani.9i9/"><i class="fab fa-instagram-square" style="font-size:30px;color:black"></i></a>
+                    <a href="#"><i class="fa fa-facebook" style="font-size:30px;color:black"></i></a>
+                
+                </li>
+                  <li> &copy; Gaeun</li>
+                </ul>
+            </div>
+         </div>
+       
+    </footer>
+    
+
 </body>
 </html> 
