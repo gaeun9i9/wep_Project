@@ -7,11 +7,14 @@
     <title>Welcome to gaeun's Home</title>
     <link rel="w3.css" href="./css/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         *{font-family: Arial, Helvetica, sans-serif;}
         header img{ display: block; margin: 0px auto;}
-        header h1{ text-align: center;}
+        header h1{ 
+            text-align: center; background-color: lightgreen;
+            font-weight: bolder; font-style: italic;
+        }
         ul {list-style-type: none;}
         a {text-decoration: none;}
         nav ul{
@@ -30,7 +33,13 @@
             color: #FFEFD5;
         }
         body{width: 950px; margin: 0 auto;}
+        section{text-align: center;}
+        section{ display: inline-block;}
         section img{text-align: center;}
+        section h2{
+            background-color: lemonchiffon; font-weight: bolder;
+        }
+        aside h3 {font-weight: 600;}
 
     </style>
 </head>
@@ -59,18 +68,17 @@
                 <img class="w3-col s5 w3-border w3-margin" src="./images/myphoto.jpg" alt="myphoto" height="300" width="240">
                 <img class="w3-col s5 w3-border w3-margin" src="./images/myphoto2.jpg" alt="muphoto2" height="300" width="240">
             </div>
-        <br>
-        <hr>
-        <h2 class="w3-text-brown w3-xlarge">좋아하는 오디오</h2>
-        <audio autoplay loop src="./media/music01.mp3" controls></audio>
-        <br>
-        <h2 class="w3-text-brown w3-xlarge">( ⁎ ᵕᴗᵕ ⁎ ) </h2>
-        <video width="50%" height="50%" controls autoplay loop src="./media/clouds.mp4" controls></video>
-        <br>
-        <hr>
-        <h2 class="w3-text-brown w3-xlarge">좋아하는 영상</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PB_2g7J12l0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <hr>
+            <br>
+            <hr>
+            <h2 class="w3-text-brown w3-xlarge">( ⁎ ᵕᴗᵕ ⁎ )</h2>
+            <audio autoplay loop src="./media/music02.mp3" controls></audio>
+            <br><br>
+            <video width="50%" height="50%" controls autoplay loop src="./media/clouds.mp4" controls></video>
+            <br>
+            <hr>
+            <h2 class="w3-text-brown w3-xlarge">좋아하는 영상</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PB_2g7J12l0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <hr>
         </div>
         <div id="profile"> 
             <h2 class="w3-text-brown w3-xlarge">My name is Gaeun!</h2>
@@ -93,7 +101,7 @@
                 </tr>
                 <tr>
                     <td>MBTI</td>
-                    <td>ISFP</td>
+                    <td>ISFT</td>
                 </tr>
             </table>
         </div>
@@ -126,7 +134,7 @@
     <aside class="right">
      <div id="login">
         <h3>Log In</h3>
-        <form action="#" method="POST">
+        <form action="#" method="post">
             아이디   : <input type="text" name="name"> <br>
             비밀번호 : <input type="password" name="pass" id="pass"> <br>
             <input type="submit" value="확인">
@@ -149,19 +157,21 @@
             <div class="w3-col s4  w3-container" >
                 <h5> Contact Me</h5>
                 <ul>
-                  <li>Email: <a href="mailto:jge0919@donga.ac.kr" title="Email Us">jge0919@donga.ac.kr</a></li>
-                  <li>SNS:
-                    <a href="https://www.instagram.com/gani.9i9/"><i class="fab fa-instagram-square" style="font-size:30px;color:black"></i></a>
-                    <a href="#"><i class="fa fa-facebook" style="font-size:30px;color:black"></i></a>
-                
-                </li>
+                    <li>Email: <a href="mailto:jge0919@donga.ac.kr" title="Email Us">jge0919@donga.ac.kr</a></li>
+                    
+                </ul>
+            </div>
+            <div class="w3-col s4  w3-container" >
+                <h5> Follow Me</h5>
+                <a href="https://www.instagram.com/gani.9i9/"><i class="fa fa-instagram" style="font-size:30px;color:black"></i></a>
+                <a href="#"><i class="fa fa-facebook" style="font-size:30px;color:black"></i></a>
+                <br>
+                <ul>
                   <li> &copy; Gaeun</li>
                 </ul>
             </div>
          </div>
        
     </footer>
-    
-
 </body>
 </html> 
